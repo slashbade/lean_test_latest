@@ -1,0 +1,24 @@
+name = "lean_test_latest"
+version = "0.1.0"
+keywords = ["math"]
+defaultTargets = ["LeanTestLatest"]
+
+[leanOptions]
+pp.unicode.fun = true # pretty-prints `fun a ↦ b`
+autoImplicit = false
+relaxedAutoImplicit = false
+weak.linter.mathlibStandardSet = true
+maxSynthPendingDepth = 3
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.24.0-rc1"
+
+[[require]]
+name = "reap"
+git = "https://github.com/frenzymath/reap.git"
+rev = "feature/search"
+
+[[lean_lib]]
+name = "LeanTestLatest"
